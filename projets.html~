@@ -3,6 +3,7 @@
         <head>
                 <title>Projets </title>
                 <meta-charset="utf-8"/>
+                <link rel="stylesheet" href="styles.css">
         </head>
         
         <body>
@@ -17,10 +18,12 @@
 
                                         <li><a href="index.html">Page d'accueil</a></li>
                                         <li><a href="cv.html">CV</a></li>
-                                        <li><a href="projets.html">Projets</a></li>
+                                        <li><a href="projets.html" class="current">Projets</a></li>
                         
 
                                  </ul>
+
+                        </nav>         
                                 
         
         </body>

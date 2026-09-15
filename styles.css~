@@ -1,0 +1,22 @@
+body  {
+
+        background-color:lightgreen;
+
+
+ }
+
+
+.current {
+
+        background-color:yellow;
+        font-style:italic;
+
+}
+
+
+footer {
+
+        background-color:yellow;
+        font-style:bold;
+
+}
