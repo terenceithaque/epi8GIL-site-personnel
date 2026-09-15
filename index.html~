@@ -20,11 +20,12 @@
                         
                         </nav>
                         
-                                
-                        <h1>Bienvenue chez Terenceithaque</h1>
-                        <main>
+                         
+                        <main>   
+                                <h1>Bienvenue chez Terenceithaque</h1>
+                       
 
-                                 <h2>Qui suis-je ?</h2>
+                                <h2>Qui suis-je ?</h2>
                                          <p>Bonjour ! Je m'appelle <strong>Terenceithaque</strong> et je suis passionné de programmation informatique depuis plusieurs années.</p>
                                          <p> J'ai réalisé plusieurs projets, notamment des jeux en Python et des sites Internet.</p>  
 
@@ -37,6 +38,8 @@
 
                <footer>
                         <p> Terenceithaque (<a href="https://github.com/terenceithaque">GitHub</a>).</p> 
+
+               </footer>         
         
         </body>
 
