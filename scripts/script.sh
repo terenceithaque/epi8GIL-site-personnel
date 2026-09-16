@@ -46,4 +46,13 @@ echo $final_code
 
 
 
+# Ecrire le code source complet dans le fichier final
+echo $final_code > "{$source_file}_final.html"
+
+
+echo "final file created, opening..."
+
+
+# Ouvrir le fichier
+xdg-open "{$source_file}_final.html" 
 
