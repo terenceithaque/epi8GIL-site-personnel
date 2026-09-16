@@ -38,7 +38,11 @@ echo $date
 
 
 date_paragraph=$(head -3 layout/after.html)
-echo $date_paragraph
+
+
+# Code final
+final_code="$before_code$source_code$after_code"
+echo $final_code
 
 
 
