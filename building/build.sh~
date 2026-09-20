@@ -4,9 +4,6 @@ source_file=${1:?Fichier source manquant} # Fichier source
 
 echo $source_file
 
-# Code source du fichier
-source_code=$(cat $source_file)
-title=$(head -1 $source_file)
 
 echo "Titre du fichier source: $title"
 
@@ -25,24 +22,34 @@ test -f layout/before.html || error "layout/before.html: fichier inexistant"
 test -f layout/after.html || error "layout/after.html: fichier inexistant"
 
 
+
+# Code source du fichier
+source_code=$(cat $source_file)
+title=$(head -1 $source_file)
+
+
+
+
+
+# Actualiser la date de modification du fichier
+date=$(date)
+echo $date
+
+
+
 #  Code source du fichier before.html
-before_code=$(cat layout/before.html)
-cat $source_file
+before_code=$(cat layout/before.html | sed -i "s/##TITRE##/$title/g")
 
 # Code source du fichier after.html
 after_code=$(cat layout/after.html)
 
 
-date=$(date)
-echo $date
 
-
-date_paragraph=$(head -3 layout/after.html)
-
-
-# Code final
+# Code final du fichier HTML
 final_code="$before_code$source_code$after_code"
 echo $final_code
+
+
 
 
 
