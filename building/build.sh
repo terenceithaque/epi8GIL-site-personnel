@@ -22,11 +22,11 @@ test -f layout/before.html || error "layout/before.html: fichier inexistant"
 test -f layout/after.html || error "layout/after.html: fichier inexistant"
 
 
-html_files=$(ls input/ | grep ".html")
-css_files=$(ls input/ | grep ".css")
+#  Code source du fichier before.html
+before_code=$(cat layout/before.html | sed "s/##TITRE##/$title/g")
 
-echo "Fichiers html: $html_files"
-echo "Fichiers css: $css_files"
+# Code source du fichier after.html
+after_code=$(cat layout/after.html | sed "s/##DATEMODIF##/$date/g")
 
 
 for source_file in input/*.html; do
@@ -47,13 +47,6 @@ for source_file in input/*.html; do
         date=$(date)
         #echo $date
 
-
-
-        #  Code source du fichier before.html
-        before_code=$(cat layout/before.html | sed "s/##TITRE##/$title/g")
-
-        # Code source du fichier after.html
-        after_code=$(cat layout/after.html | sed "s/##DATEMODIF##/$date/g")
 
 
 
