@@ -1,0 +1,78 @@
+*:root  {
+
+        --accent-color:lightgreen;
+}
+
+
+html {
+
+        background-color:var(--accent-color);
+
+
+}
+
+
+body main {
+
+        max-width:800px;
+        margin: 45px 150px 75px 500px;
+
+}
+
+h1 {
+
+        text-align:center;
+        font-family: "Sans Serif";
+
+}
+
+
+
+.navigation {
+
+        margin: 0px 0px 0px 0px;
+        display:inline;
+        color:var(--accent-color);
+}
+
+.navigation a {
+
+        opacity:0.7;
+        font-weight:bold;
+        padding:1em;
+        border:2px;
+
+
+}
+
+
+.current {
+
+        opacity:1.0;
+        background-color:yellow;
+
+ }
+
+
+
+.navigation a:hover {
+
+        opacity:1;
+
+}
+
+
+
+main {
+
+        border:2px;
+        border-bottom-color:white;
+
+}
+
+footer {
+
+        background-color:yellow;
+        font-weigh:bold;
+
+}
