@@ -38,7 +38,7 @@ echo $date
 
 
 #  Code source du fichier before.html
-before_code=$(cat layout/before.html | sed -i "s/##TITRE##/$title/g")
+before_code=$(cat layout/before.html | sed "s/##TITRE##/$title/g")
 
 # Code source du fichier after.html
 after_code=$(cat layout/after.html)

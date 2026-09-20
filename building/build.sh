@@ -5,7 +5,7 @@ source_file=${1:?Fichier source manquant} # Fichier source
 echo $source_file
 
 
-echo "Titre du fichier source: $title"
+
 
 
 function error {
@@ -27,7 +27,7 @@ test -f layout/after.html || error "layout/after.html: fichier inexistant"
 source_code=$(cat $source_file)
 title=$(head -1 $source_file)
 
-
+echo "Titre du fichier source: $title"
 
 
 
@@ -41,7 +41,7 @@ echo $date
 before_code=$(cat layout/before.html | sed "s/##TITRE##/$title/g")
 
 # Code source du fichier after.html
-after_code=$(cat layout/after.html)
+after_code=$(cat layout/after.html | sed "s/##DATEMODIF##/$date/g")
 
 
 
