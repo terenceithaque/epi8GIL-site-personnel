@@ -17,17 +17,23 @@ function error {
 
 
 
+
+
+
 #test -f $source || error  "{$source}: fichier inexistant"
 test -f layout/before.html || error "layout/before.html: fichier inexistant"
 test -f layout/after.html || error "layout/after.html: fichier inexistant"
 test -f output/ || mkdir output
 
 
-#  Code source du fichier before.html
-before_code=$(cat layout/before.html | sed "s/##TITRE##/$title/g")
+# Actualiser la date de modification des fichiers  fichier
+
+date_modif=$(date)
+
+
 
 # Code source du fichier after.html
-after_code=$(cat layout/after.html | sed "s/##DATEMODIF##/$date/g")
+after_code=$(cat layout/after.html | sed "s/##DATEMODIF##/$date_modif/g")
 
 
 for source_file in input/*.html; do
@@ -42,10 +48,10 @@ for source_file in input/*.html; do
 
         echo "Titre du fichier source: $title"
 
+        #  Code source du fichier before.html
+        before_code=$(cat layout/before.html | sed "s/##TITRE##/$title/g")
 
 
-        # Actualiser la date de modification du fichier
-        date=$(date)
         #echo $date
 
 
