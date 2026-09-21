@@ -20,6 +20,7 @@ function error {
 #test -f $source || error  "{$source}: fichier inexistant"
 test -f layout/before.html || error "layout/before.html: fichier inexistant"
 test -f layout/after.html || error "layout/after.html: fichier inexistant"
+test -f output/ || mkdir output
 
 
 #  Code source du fichier before.html
