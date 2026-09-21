@@ -23,8 +23,10 @@ function error {
 #test -f $source || error  "{$source}: fichier inexistant"
 test -f layout/before.html || error "layout/before.html: fichier inexistant"
 test -f layout/after.html || error "layout/after.html: fichier inexistant"
-test -f output/ || mkdir output
 
+test -d input/ || error "Aucun dossier input pour extraire les fichiers."
+test -d output/ || mkdir output
+test -d layout/ || error "Aucun dossier layout pour extraire les fichiers."
 
 # Actualiser la date de modification des fichiers  fichier
 

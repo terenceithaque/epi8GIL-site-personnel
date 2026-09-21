@@ -23,8 +23,10 @@ function error {
 #test -f $source || error  "{$source}: fichier inexistant"
 test -f layout/before.html || error "layout/before.html: fichier inexistant"
 test -f layout/after.html || error "layout/after.html: fichier inexistant"
-test -f output/ || mkdir output
 
+test -f input/ || error "Aucun dossier input pour extraire les fichiers."
+test -f output/ || mkdir output
+test -f layout/ || error "Aucun dossier layout pour extraire les fichiers."
 
 # Actualiser la date de modification des fichiers  fichier
 
@@ -48,7 +50,7 @@ for source_file in input/*.html; do
         title=$(head -1 $source_file)
 
         # Supprimer le titre en première ligne du code source du corps du fichier
-        source_code=$(cat $source_file | sed "0,/$title/s/''/")
+        source_code=$(cat $source_file | sed "0,/$title/s/$title/\ /")
 
         echo "Titre du fichier source: $title"
 
