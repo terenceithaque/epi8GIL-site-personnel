@@ -42,9 +42,13 @@ for source_file in input/*.html; do
         file_name="${source_file#input/}"
       
         echo "Construction du fichier $file_name"
-        # Code source du fichier
-        source_code=$(cat $source_file)
+
+
+        # Titre de la page
         title=$(head -1 $source_file)
+
+        # Supprimer le titre en première ligne du code source du corps du fichier
+        source_code=$(cat $source_file | sed "0,/$title/s/$title/\ /")
 
         echo "Titre du fichier source: $title"
 
