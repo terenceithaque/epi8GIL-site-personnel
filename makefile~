@@ -1,0 +1,11 @@
+all: $(PAGES)
+
+$(PAGES): layout/before.html layout/after.html
+
+output/%.html: input/%.html
+
+
+output/index.html: input/index.html layout/before.html layout/after.html
+        ./building/build.sh
+
+output/cv.html: input/cv.html layout/before.html layout/after.html:         

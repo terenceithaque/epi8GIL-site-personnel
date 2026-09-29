@@ -1,0 +1,16 @@
+PAGES_SRC := $(wildcard input/*.html)
+PAGES := $(subst input/,output/, $(PAGES_SRC))
+ASSETS_SRC := ./styles.css
+
+.PHONY: all clean
+
+all:$(PAGES)
+all: output layout/before.html layout/after.html
+
+$(PAGES): layout/before.html layout/after.html
+
+$(ASSETS): output
+
+output:
+        mkdir output
+        
