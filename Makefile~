@@ -4,14 +4,16 @@ ASSETS_SRC := ./styles.css
 
 .PHONY: all clean
 
-all:$(PAGES)
-all: output layout/before.html layout/after.html
 
 $(PAGES): layout/before.html layout/after.html
 
 $(ASSETS): output
 
 output:
-        mkdir output
+	mkdir output
 
 output/%.html: input/%.html
+	./building/build.sh $<>@
+
+clean:
+	rm - rf output/*
