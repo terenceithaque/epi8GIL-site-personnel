@@ -19,11 +19,10 @@ body main {
 
 }
 
-.title  {
+h1 {
 
         text-align:center;
         font-family: "Sans Serif";
-        font-size: 30px;
 
 }
 
