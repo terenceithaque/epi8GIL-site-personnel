@@ -76,9 +76,9 @@ for source_file in input/*.html; do
 
 
         # Ecrire le code source complet dans le fichier final
-        echo $final_code > "output/$file_name"
+        echo $final_code > "public/$file_name"
 
-        echo "Fini de construire output/$file_name"
+        echo "Fini de construire public/$file_name"
 done
 
 
@@ -88,10 +88,13 @@ for css_file in input/*.css; do
 
         file_name="${css_file/input}"
 
-        cp $css_file "output/$file_name"
+        cp $css_file "public/$file_name"
 
-        echo "Copié la feuille de style dans output/$file_name"
+        echo "Copié la feuille de style dans public/$file_name"
 
 
-        echo "Terminé la copie des fichiers dans output/"
 done
+
+
+
+echo "Terminé la copie des fichiers dans public/"

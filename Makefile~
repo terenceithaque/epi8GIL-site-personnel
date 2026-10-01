@@ -16,4 +16,6 @@ output/%.html: input/%.html
 	./building/build.sh $<>@
 
 clean:
-	rm - rf output/*
+	$(rm - rf output/*)
+
+

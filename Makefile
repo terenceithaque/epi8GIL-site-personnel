@@ -9,11 +9,13 @@ $(PAGES): layout/before.html layout/after.html
 
 $(ASSETS): output
 
-output:
+public:
 	mkdir output
 
-output/%.html: input/%.html
+public/%.html: input/%.html
 	./building/build.sh $<>@
 
 clean:
 	$(rm - rf output/*)
+
+
