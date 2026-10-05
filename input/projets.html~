@@ -1,9 +1,24 @@
 Projets
 <header>
 
-<h1> Mes projets </h1>
+<h1 class="title"> Mes projets </h1>
+<h2>Résumé</h2>
+    <p>J'ai réalisé plusieurs projets au fil des années. J'ai créé notamment plusieurs sites web avec HTML, CSS et Javascript, et avec Python 
+    toutes sortes de jeux et de programmes. Je me suis également intéressé à d'autres langages comme C, Java ou Racket.</p>
+ 
 
-    <p> Vous trouverez ci-dessous une liste de projets. </p>    
-                                
+
+    <h3>Liens de projets</h3>
+
+        <p> Vous trouverez ci-dessous une liste de projets. </p>    
+
+        <ul>
+
+            <li><a href="https://terenceithaque.github.io/ithaque">terenceithaque.github.io/ithaque</a>, premier site web que j'ai publié sur l'île d'Ithaque.</li>
+            <li><a href="https://terenceithaque.github.io/Venise">terenceithaque.github.io/Venise</a>, mon deuxième site web.</li>
+            <li><a href="https://github.com/terenceithaque/space-invader">https://github.com/terenceithaque/space-invader</a>, un jeu "Space Invader" en Python.</li>
+
+       
+       </ul>               
         
              

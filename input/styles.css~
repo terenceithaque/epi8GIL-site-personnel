@@ -19,10 +19,19 @@ body main {
 
 }
 
-h1 {
+.title  {
 
         text-align:center;
         font-family: "Sans Serif";
+        font-size: 30px;
+
+}
+
+.paragraph-title {
+
+    font-family:"Sans Serif";
+    font-style: italic;
+    "font-size": 25px;
 
 }
 
