@@ -7,15 +7,15 @@ ASSETS_SRC := ./styles.css
 
 $(PAGES): layout/before.html layout/after.html
 
-$(ASSETS): output
+$(ASSETS): public
 
-output:
-	mkdir output
+public:
+	mkdir public
 
-output/%.html: input/%.html
+public/%.html: input/%.html
 	./building/build.sh $<>@
 
 clean:
-	$(rm - rf output/*)
+	$(rm - rf public/*)
 
 

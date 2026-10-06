@@ -1,5 +1,5 @@
 PAGES_SRC := $(wildcard input/*.html)
-PAGES := $(subst input/,output/, $(PAGES_SRC))
+PAGES := $(subst input/,public/, $(PAGES_SRC))
 ASSETS_SRC := ./styles.css
 
 .PHONY: all clean
@@ -7,15 +7,15 @@ ASSETS_SRC := ./styles.css
 
 $(PAGES): layout/before.html layout/after.html
 
-$(ASSETS): output
+$(ASSETS): public
 
 public:
-	mkdir output
+	mkdir public
 
 public/%.html: input/%.html
 	./building/build.sh $<>@
 
 clean:
-	$(rm - rf output/*)
+	$(rm - rf public/*)
 
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Isometra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Isometra&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 *:root  {
 
@@ -22,7 +22,13 @@ body main {
 }
 
 p {
-    font-family:"Bitcount Ink";
+    font-family:"Josefin Sans";
+
+}
+
+li {
+
+    font-family: "Josefin Sans";
 
 }
 

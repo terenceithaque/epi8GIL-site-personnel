@@ -1,15 +1,19 @@
 Chemin relatif du fichier source: input/cv.html
 Construction du fichier cv.html
 Titre du fichier source: CV
-Fini de construire output/cv.html
+Fini de construire public/cv.html
 Chemin relatif du fichier source: input/index.html
 Construction du fichier index.html
 Titre du fichier source: Bienvenue chez Terenceithaque
-Fini de construire output/index.html
+Fini de construire public/index.html
+Chemin relatif du fichier source: input/liens.html
+Construction du fichier liens.html
+Titre du fichier source: Liens utiles
+Fini de construire public/liens.html
 Chemin relatif du fichier source: input/projets.html
 Construction du fichier projets.html
 Titre du fichier source: Projets
-Fini de construire output/projets.html
+Fini de construire public/projets.html
 Copie de la feuille de style:  input/styles.css
-Copié la feuille de style dans output//styles.css
-Terminé la copie des fichiers dans output/
+Copié la feuille de style dans public//styles.css
+Terminé la copie des fichiers dans public/
