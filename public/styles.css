@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Isometra&display=swap');
+
 *:root  {
 
-        --accent-color:lightgreen;
+        --accent-color:rgb(255, 250, 240);
 }
 
 
@@ -16,6 +18,11 @@ body main {
 
         max-width:800px;
         margin: 45px 150px 75px 500px;
+
+}
+
+p {
+    font-family:"Bitcount Ink";
 
 }
 
@@ -49,7 +56,7 @@ body main {
         opacity:0.7;
         font-weight:bold;
         padding:1em;
-        border:2px;
+        border:1px;
 
 
 }
@@ -66,7 +73,7 @@ body main {
 
 .navigation a:hover {
 
-        opacity:1;
+        color:red;
 
 }
 
@@ -83,5 +90,12 @@ footer {
 
         background-color:yellow;
         font-weigh:bold;
+
+}
+
+
+::selection {
+
+    background-color: rgb(255, 127, 80);
 
 }

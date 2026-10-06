@@ -1,7 +1,7 @@
 Bienvenue chez Terenceithaque
 
 
-<h1>Bienvenue chez Terenceithaque</h1>
+<h1 class="title">Bienvenue chez Terenceithaque</h1>
 
 <h2>Qui suis-je ?</h2>
                       <p>Bonjour ! Je m'appelle <strong>Terenceithaque</strong> et je suis passionné de programmation informatique depuis plusieurs années.</p>
