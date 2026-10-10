@@ -46,7 +46,7 @@ for source_file in input/*.html; do
         echo "Chemin relatif du fichier source: $source_file"
 
         file_name="${source_file#input/}"
-      
+
         echo "Construction du fichier $file_name"
 
 
@@ -58,9 +58,30 @@ for source_file in input/*.html; do
 
         echo "Titre du fichier source: $title"
 
-        #  Code source du fichier before.html
-        before_code=$(cat layout/before.html | sed "s/##TITRE##/$title/g")
 
+
+        # Récupérer le lien vers la page pour y ajouter la classe 'current'
+        original_page_link=$(grep $file_name layout/before.html)
+        page_link_line=$(grep $file_name layout/before.html | sed "s/##CLASSCURRENT##/class='current'/g")
+
+        # Supprimer les occurrences "CLASSCURRENT" des autres lignes
+        original_link_lines=$(grep "##CLASSCURRENT##" layout/before.html | grep -v $file_name) 
+        link_lines=$(grep "##CLASSCURRENT##" layout/before.html | grep -v $file_name | sed "s/##CLASSCURRENT##/\ /g")
+
+        echo "Lignes de liens : $original_link_lines"
+        echo "Nouvelles lignes de liens : $link_lines"
+
+        #echo "Ligne originale du lien : ${original_page_link_line}"
+        #echo "Ligne du lien : ${page_link_line}"
+
+        #  Code source du fichier before.html
+
+        before_code=$(cat layout/before.html)
+        before_code=${before_code//"##TITRE##"/"$title"}
+
+        before_code=${before_code//"$original_page_link"/"$page_link_line"}
+        before_code=${before_code//"$original_link_lines"/"$link_lines"}
+ 
 
         #echo $date
 
